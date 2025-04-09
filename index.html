@@ -13,6 +13,13 @@
             padding: 0;
         }
 
+        :root {
+            /* 新增透明度相关变量 */
+            --glass-opacity: 0.1;
+            /* 毛玻璃透明度 */
+            --glass-blur: 16px;
+        }
+
         body {
             height: 100vh;
             width: 100vw;
@@ -29,16 +36,12 @@
             justify-content: left;
         }
 
-        :root {
-            /* 新增透明度相关变量 */
-            --glass-opacity: 0.4;
-            /* 毛玻璃透明度 */
-            --glass-blur: 16px;
-        }
-
         .title {
             font-size: 2rem;
-            color: rgb(255, 255, 255)
+            color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .panel {
@@ -49,7 +52,7 @@
             /* 垂直排列子元素 */
             gap: 20px;
             /* 子元素间距也保持30px */
-            box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(var(--glass-blur));
             /* 模糊效果 */
             -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -70,6 +73,14 @@
         .text2 {
             font-size: 1.1rem;
             color: rgb(231, 231, 231);
+        }
+
+        .text3 {
+            text-decoration: none;
+            color: rgb(231, 231, 231);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .text a {
@@ -95,7 +106,7 @@
 
 <body>
     <div>
-        <header class="title">LKXN</header> <a class="text" style="font-size: 0.9rem;"
+        <header class="title">LKXN</header> <a class="text3" style="font-size: 0.9rem;"
             href="declaration.html">Declaration</a>
         <div class=panel>
             <div class="text">
@@ -106,9 +117,6 @@
             </div>
             <div class="text">
                 <a href="https://github.com/1kxn" target="_blank" rel="noopener" class="text">GitHub</a>
-            </div>
-            <div class="text">
-                <a href="https://someonestudio.github.io" target="_blank" rel="noopener" class="text">S0Studio</a>
             </div>
             <div class="text">
                 <a href="https://somerui.xyz/" target="_blank" rel="noopener" class="text">RuiSite</a>
